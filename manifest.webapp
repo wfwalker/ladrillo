@@ -1,0 +1,24 @@
+{
+  "version": "0.1",
+  "name": "DevCon5 Demo",
+  "description": "DevCon5 Demo",
+  "launch_path": "/index.html",
+  "icons": {
+    "64": "/ladrillo-64.png",
+    "128": "/ladrillo-128.png"
+  },
+  "developer": {
+    "name": "Bill Walker",
+    "url": "http://github.com/wfwalker/"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "locales": {},
+  "default_locale": "en",
+  "permissions": {
+    "geolocation": {
+      "description": "Used to know where you are"
+    }
+  }
+}

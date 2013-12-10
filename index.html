@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Ladrillo</title>
+	    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+		<link rel="stylesheet" type="text/css" href="brick-0.9.2/brick-0.9.2.css"/>
+		<link rel="stylesheet" type="text/css" href="app.css"/>
+		<script type="text/javascript" src="brick-0.9.2/brick-0.9.2.js"></script>		
+	</head>
+
+	<body style='background-color: black'>
+		<x-layout>
+			<x-appbar>
+			    <header>Ladrillo</header>
+			</x-appbar>
+
+			<x-deck class="component-demo" transition-type="coverDown">
+			    <x-card style='background-image: url(./_MG_8401.jpg)'>
+			    	<div class='overlay'>Images from the Louvre</div>
+				</x-card>
+			    <x-card>
+			    	<div>
+			    		<div id='pictureframe' style='transform: rotate(0.1turn)'><img style='width: 100%' src='_MG_8405.jpg' /></div>
+			    		<div class='slider-container'><x-slider polyfill='true' style='width: 100%' id='rotator'></x-slider></div>
+			    	</div>
+			    </x-card>
+			    <x-card style='background-image: url(_MG_8411.jpg)' />
+				    <div class='overlay' id='install'>install</div>
+			    </x-card>
+			</x-deck>
+
+			<x-tabbar>
+			    <x-tabbar-tab target-selector="x-deck x-card:first-child">1</x-tabbar-tab>
+			    <x-tabbar-tab target-selector="x-deck x-card:nth-child(2)">2</x-tabbar-tab>
+			    <x-tabbar-tab target-selector="x-deck x-card:nth-child(3)">3</x-tabbar-tab>
+			</x-tabbar>
+		</x-layout>
+
+		<script>
+			document.addEventListener('DOMComponentsLoaded', function(){
+				document.getElementById('rotator').addEventListener('input', function(event) {
+					var rotatorValue = document.getElementById('rotator').value;
+					console.log(rotatorValue);
+					document.getElementById('pictureframe').style.transform = 'rotate(' + (rotatorValue / 200.0) + 'turn)';
+				});
+			});
+
+          var installButton = document.getElementById('install');
+
+          installButton.addEventListener('click', function (e) {
+            var installRequest = navigator.mozApps.install('http://localhost/~walker/yuiconf2013-demo/online.webapp');
+
+            installRequest.onsuccess = function (data) {
+              console.log(data);
+            };
+
+            installRequest.onerror = function (err) {
+              console.error(this.error);
+            };
+          }, false);
+
+
+		</script>
+	</body>
+</html>
