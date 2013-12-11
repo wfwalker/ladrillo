@@ -14,17 +14,17 @@
 			</x-appbar>
 
 			<x-deck class="component-demo" transition-type="coverDown">
-			    <x-card style='background-image: url(./_MG_8401.jpg)'>
-			    	<div class='overlay'>Images from the Louvre</div>
+			    <x-card class='photo-1-background'>
+			    	<div class='overlay-title'>Images from the Louvre</div>
 				</x-card>
 			    <x-card>
 			    	<div>
-			    		<div id='pictureframe' style='transform: rotate(0.1turn)'><img style='width: 100%' src='_MG_8405.jpg' /></div>
+			    		<div id='pictureframe' style='transform: rotate(0.1turn)'><img style='height: 100%' src='_MG_8405.jpg' /></div>
 			    		<div class='slider-container'><x-slider polyfill='true' style='width: 100%' id='rotator'></x-slider></div>
 			    	</div>
 			    </x-card>
-			    <x-card style='background-image: url(_MG_8411.jpg)' />
-				    <div class='overlay' id='install'>install</div>
+			    <x-card class='photo-3-background' />
+				    <div class='overlay-button' id='install'>install</div>
 			    </x-card>
 			</x-deck>
 
@@ -44,20 +44,19 @@
 				});
 			});
 
-          var installButton = document.getElementById('install');
+			var installButton = document.getElementById('install');
 
-          installButton.addEventListener('click', function (e) {
-            var installRequest = navigator.mozApps.install('http://localhost/~walker/yuiconf2013-demo/online.webapp');
+			installButton.addEventListener('click', function (e) {
+				var installRequest = navigator.mozApps.install('http://localhost/~walker/yuiconf2013-demo/online.webapp');
 
-            installRequest.onsuccess = function (data) {
-              console.log(data);
-            };
+				installRequest.onsuccess = function (data) {
+				console.log(data);
+				};
 
-            installRequest.onerror = function (err) {
-              console.error(this.error);
-            };
-          }, false);
-
+				installRequest.onerror = function (err) {
+				console.error(this.error);
+				};
+			}, false);
 
 		</script>
 	</body>

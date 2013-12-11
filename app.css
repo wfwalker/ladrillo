@@ -1,9 +1,35 @@
-.overlay {
+.overlay-title {
 	color: white;
     font: 24px Open Sans;
     padding-top: 20px;
     text-align: center;
     text-shadow: 1px 1px 1px #000;
+}
+
+.overlay-button {
+	color: white;
+    font: 24px Open Sans;
+    padding-top: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.photo-1-background {
+	background-image: url(./_MG_8401.jpg);
+	background-position: center center;
+	background-size: auto 100%;	
+}
+
+.photo-2-background {
+	background-image: url(./_MG_8405.jpg);
+	background-position: center center;
+	background-size: auto 100%;	
+}
+
+.photo-3-background {
+	background-image: url(./_MG_8411.jpg);
+	background-position: center center;
+	background-size: auto 100%;	
 }
 
 .slider-container {
