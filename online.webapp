@@ -1,0 +1,25 @@
+{
+  "version": "0.1",
+  "name": "Ladrillo",
+  "description": "DevCon5 Demo using Brick",
+  "launch_path": "/~walker/ladrillo/index.html",
+  "icons": {
+    "64": "/~walker/ladrillo/ladrillo-64.png",
+    "128": "/~walker/ladrillo/ladrillo-128.png"
+  },
+  "developer": {
+    "name": "Bill Walker",
+    "url": "http://github.com/wfwalker/"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "orientation": "portrait",
+  "locales": {},
+  "default_locale": "en",
+  "permissions": {
+    "geolocation": {
+      "description": "Used to know where you are"
+    }
+  }
+}
