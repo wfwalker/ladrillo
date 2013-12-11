@@ -14,6 +14,7 @@
   "installs_allowed_from": [
     "*"
   ],
+  "orientation": "portrait",
   "locales": {},
   "default_locale": "en",
   "permissions": {
