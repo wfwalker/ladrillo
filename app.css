@@ -40,6 +40,9 @@
 }
 
 .slider-thumb {
-	width: 3em;
-	height: 3em;
+	height: 40px !important;
+}
+
+x-tabbar {
+	font-size: 200%;
 }
