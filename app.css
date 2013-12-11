@@ -9,7 +9,7 @@
 .overlay-button {
 	color: white;
     font: 24px Open Sans;
-    padding-top: 20px;
+    margin-top: 20px;
     text-align: center;
     text-shadow: 1px 1px 1px #000;
 }
