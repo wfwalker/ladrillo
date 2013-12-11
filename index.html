@@ -47,7 +47,7 @@
 			var installButton = document.getElementById('install');
 
 			installButton.addEventListener('click', function (e) {
-				var installRequest = navigator.mozApps.install('http://localhost/~walker/yuiconf2013-demo/online.webapp');
+				var installRequest = navigator.mozApps.install('http://localhost/~walker/ladrillo/online.webapp');
 
 				installRequest.onsuccess = function (data) {
 				console.log(data);
